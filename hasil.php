@@ -28,4 +28,20 @@
 	printf("%s", $row['alamat']);
 	echo "<br>";
 	
+	if (isset($_POST['reset'])) {
+		session_destroy();
+		header('Location: register.php');
+	}
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="hasil.php" method='POST'>
+		<button type="submit" name="reset">EXIT</button>
+	</form>
+</body>
+</html>
